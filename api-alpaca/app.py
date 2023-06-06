@@ -60,7 +60,7 @@ def predict_image(model, image_filepath):
     return result
 
 
-# Define Flask route for image upload
+# Define Flask route for image prediction
 @app.route('/predict', methods=['POST'])
 def predict():
     # Check if raw_image is in request files
