@@ -61,8 +61,8 @@ def predict_image(model, image_filepath):
 
 
 # Define Flask route for image upload
-@app.route('/', methods=['POST'])
-def upload_file():
+@app.route('/predict', methods=['POST'])
+def predict():
     # Check if raw_image is in request files
     if 'raw_image' not in request.files:
         return jsonify({"message": "no file in request!"}, 400)
